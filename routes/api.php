@@ -32,4 +32,5 @@ Route::group(['namespace' => 'api'], function () {
 Route::group(['middleware' => 'auth:api', 'namespace' => 'api'], function() {
     Route::get('userDetails', 'UserController@details');
     Route::post('/changePassword', 'UserController@changePassword');
+    Route::post('filetest', 'ServiceListController@test');
 });
