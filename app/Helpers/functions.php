@@ -2,6 +2,6 @@
 // My common functions
 function test()
 {
-    return "123";
+    return "1234";
 }
 ?>

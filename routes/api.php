@@ -32,5 +32,9 @@ Route::group(['namespace' => 'api'], function () {
 Route::group(['middleware' => 'auth:api', 'namespace' => 'api'], function() {
     Route::get('userDetails', 'UserController@details');
     Route::post('/changePassword', 'UserController@changePassword');
-    Route::post('filetest', 'ServiceListController@test');
+    Route::post('/checkCaVisa', 'ServiceListController@checkCaVisa');
+    Route::post('/applyCaVisa', 'ServiceListController@applyCaVisa');
+    Route::post('/getCaVisaBaseInfo', 'ServiceListController@getCaVisaBaseInfo');
+    Route::post('/saveCaVisaBaseInfo', 'ServiceListController@saveCaVisaBaseInfo');
+    Route::post('filetest', 'FileController@test');
 });
